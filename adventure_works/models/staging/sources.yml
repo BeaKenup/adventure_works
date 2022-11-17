@@ -1,0 +1,48 @@
+
+version: 2
+
+sources:
+  - name: adv_works
+    description: Banco de dados da Adventure Works integrado no bigquery
+    tables:
+      - name: product
+        description: "Tabela staging de produtos produzidos pela Adventure Works"
+#        columns:
+#          - name: id
+#            description: "The primary key for this table"
+#            tests:
+#              - unique
+#              - not_null
+  
+      - name: salesreason
+        description: "Tabela com os motivos dos pedidos de venda da Adventure Works"
+  
+      - name: creditcard
+        description: "Tabela com os tipos de cartão de crédito utilizados nos pedidos de venda da Adventure Works"
+  
+      - name: customers
+        description: "Tabela staging de clientes da Adventure Works"
+#        columns:
+#          - name: id
+#            description: "The primary key for this table"
+#            tests:
+#              - unique
+#              - not_null
+  
+      - name: address
+        description: "Tabela de endereço dos clientes da Adventure Works"
+  
+      - name: stateprovince
+        description: "Tabela que inclui o estado do endereço dos clientes da Adventure Works"
+  
+      - name: countryregion
+        description: "Tabela que inclui o país do endereço dos clientes da Adventure Works"
+  
+      - name: salesorderheader
+        description: "Tabela de pedidos de venda da Adventure Works"
+  
+      - name: salesorderdetail
+        description: "Tabela de detalhamento dos pedidos de venda da Adventure Works"
+  
+      - name: salesorderheadersalesreason
+        description: "Tabela com as chaves que cruzam a tabela de pedidos de venda da Adventure Works com o motivo de venda"
