@@ -1,5 +1,5 @@
 With
-    raw_products as (
+    products as (
         select
             productid
             , productmodelid
@@ -54,7 +54,7 @@ With
         , cast(color as string) as color
         , cast(sellstartdate as date) as sell_start_date
         , cast(weight as int) as weight
-        from raw_products
+        from products
     )
 
 select *

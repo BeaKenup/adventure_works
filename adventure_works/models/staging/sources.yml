@@ -20,7 +20,7 @@ sources:
       - name: creditcard
         description: "Tabela com os tipos de cartão de crédito utilizados nos pedidos de venda da Adventure Works"
   
-      - name: customers
+      - name: customer
         description: "Tabela staging de clientes da Adventure Works"
 #        columns:
 #          - name: id
