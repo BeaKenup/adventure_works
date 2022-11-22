@@ -1,24 +1,30 @@
 With
-    credit_card as (
+    address as (
         select
-            creditcardid
-            , cardtype
-            , expyear
+            addressid
+            , stateprovinceid
+            , addressline1
+            , addressline2
+            , city
             , modifieddate
-            , expmonth
-            , cardnumber
-        from {{ source('adv_works', 'creditcard') }}
+            , rowguid
+            , postalcode
+            , spatiallocation
+        from {{ source('adv_works', 'address') }}
     )
 
     , transform as (
         select
-        cast(creditcardid as int) as credit_card_id
-        , cast(cardtype as string) as card_type
-        , cast(expyear as int) as exp_year
-        , cast(modifieddate as date) as modified_date
-        , cast(cardnumber as int) as card_number
-        , cast(expmonth as int) as exp_month
-        from credit_card
+            cast(addressid as int) as address_id
+            , cast(stateprovinceid as int) as state_province_id
+            , cast(addressline1 as string) as address_line1
+            , cast(addressline2 as string) as address_line2
+            , cast(city as string) as city
+            , cast(modifieddate as date) as modified_date
+            , cast(rowguid as string) as rowguid
+            , cast(postalcode as string) as postal_code
+            , cast(spatiallocation as string) as spatial_location
+        from address
     )
 
 select *
