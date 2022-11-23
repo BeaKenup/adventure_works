@@ -1,0 +1,8 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works_sales_reason
+    columns:
+      - name: sales_reason_sk
+        description: "código de identificação dos produtos"

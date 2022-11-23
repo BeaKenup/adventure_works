@@ -1,0 +1,8 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works_customers
+    columns:
+      - name: customer_sk
+        description: "código de identificação dos produtos"

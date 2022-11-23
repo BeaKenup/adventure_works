@@ -17,7 +17,7 @@ With
             , cast(territoryid as int) as territory_id
             , cast(storeid as int) as store_id
             , cast(rowguid as string) as rowguid
-            , cast(modifieddate as date) modified_date
+            , cast(modifieddate as date) as modified_date
         from customers
     )
 

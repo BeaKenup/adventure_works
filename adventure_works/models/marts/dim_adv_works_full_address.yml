@@ -1,0 +1,8 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works_full_address
+    columns:
+      - name: product_sk
+        description: "código de identificação dos produtos"

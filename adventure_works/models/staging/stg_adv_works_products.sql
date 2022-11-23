@@ -44,7 +44,7 @@ With
         , cast(rowguid as string) as row_guid
         , cast(weightunitmeasurecode as string) as weight_unit_measure_code
         , cast(standardcost as float64) as standard_cost
-        , cast(name as string) as name
+        , cast(name as string) as name_products
         , cast(style as string) as style
         , cast(sizeunitmeasurecode as string) as size_unit_measure_code
         , cast(listprice as float64) as list_price

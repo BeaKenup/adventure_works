@@ -1,0 +1,8 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works_credit_cards
+    columns:
+      - name: credit_card_sk
+        description: "código de identificação dos cartões de crédito"
