@@ -1,0 +1,42 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works__customers
+    description: "Tabela com as informações dos clientes da Adventure Works, incluindo a união das tabelas customer e person"
+    columns:
+      - name: customer_sk
+        description: "Chave surrogate da tabela de customer"
+
+      - name: business_entity_sk
+        description: "Chave surrogate da tabela person"
+
+      - name: business_entity_id
+        description: "Chave primária da tabela person, utilizada para união das tabelas customer e person"
+
+      - name: customer_id
+        description: "Chave primária da tabela customer"
+
+      - name: person_id
+        description: "Chave estrangeira que referencia a tabela person, utilizada para união das tabelas customer e person"
+
+      - name: complete_name
+        description: "Nome completo dos clientes da Adventure Works, coluna resultado da concatenação das colunas first_name e last_name"
+
+      - name: first_name
+        description: "Primeiro nome dos clientes da Adventure Works"
+
+      - name: last_name
+        description: "Ultimo nome dos clientes da Adventure Works"
+
+      - name: suffix
+        description: "sufixo do nome"
+
+      - name: email_promotion
+        description: "Informação sobre a escolha de receber ou não os e-mails promocionais da AdventureWorks (0= não receber; 1= deseja receber apenas da AdventureWorks; 2= deseja receber da AdventureWorks e parceiros"
+
+      - name: title
+        description: "Titulo de cortesia, como Sr e Sra "
+
+      - name: middle_name
+        description: "Nome do meio do cliente"

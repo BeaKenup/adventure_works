@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works__sales_reason
+    description: "Tabela dimensional dos registros de motivo de compra"
+    columns:
+      - name: sales_reason_sk
+        description: "Chave surrogate para os registros do motivo de compra"
+
+      - name: sales_reason_id
+        description: "Chave primária para os registros do motivo de compra"
+
+      - name: reason_type
+        description: "Categoria a que pertence o motivo da venda"
+
+      - name: name_reason
+        description: "Descrição do motivo da venda"
+
+      - name: modified_date
+        description: "Data e hora da ultima atualização do registro"

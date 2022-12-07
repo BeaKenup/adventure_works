@@ -1,0 +1,72 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works__products
+    description: "Tabela dimensão dos produtos vendidos ou utilizados na fabricação de produtos vendidos"
+    columns:
+      - name: product_sk
+        description: "Chave surrogate dos registros produtos"
+
+      - name: product_id
+        description: "Chave primária para registros de produtos"
+
+      - name: sell_end_date
+        description: "Data em que o produto não estava mais disponível para venda"
+
+      - name: safety_stock_level
+        description: "Quantidade mínima de estoque"
+
+      - name: finished_goods_flag
+        description: "Apontamento se o produto é vendável. 0 = não vendavel e 1 = vendavel"
+
+      - name: make_flag
+        description: "Apontamento se o produto foi produzido internamente ou comprado. 0 = comprado e 1 = produzido internamente"
+
+      - name: product_number
+        description: "Número único de identificação do produto"
+
+      - name: reorder_point
+        description: "Nível de estoque que aciona uma ordem de compra ou ordem de serviço"
+
+      - name: modified_date
+        description: "Data e hora da ultima atualização do registro"
+
+      - name: row_guid
+        description: "Número ROWGUIDCOL que identifica exclusivamente o registro"
+
+      - name: weight_unit_measure_code
+        description: "Unidade de medida para a coluna Peso"
+
+      - name: standard_cost
+        description: "Custo padrão do produto"
+
+      - name: name_products
+        description: "Nome do produto"
+
+      - name: style
+        description: "Estilo dos produtos. W = Feminino, M = Masculino, U = Universal"
+
+      - name: size_unit_measure_code
+        description: "Unidade de medida para a coluna Tamanho"
+
+      - name: list_price
+        description: "	Preço de venda"
+
+      - name: days_to_manufacture
+        description: "Número de dias necessários para fabricar o produto"
+
+      - name: product_line
+        description: "Modelo do produto. R = Estrada, M = Montanha, T = Turismo, S = Padrão"
+
+      - name: size
+        description: "Tamanho do produto"
+
+      - name: color
+        description: "Cor do produto"
+
+      - name: sell_start_date
+        description: "Data em que o produto estava disponível para venda"
+
+      - name: weight
+        description: "Peso do Produto"

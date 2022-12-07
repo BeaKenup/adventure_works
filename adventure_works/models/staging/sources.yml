@@ -7,42 +7,124 @@ sources:
     tables:
       - name: product
         description: "Tabela staging de produtos produzidos pela Adventure Works"
-#        columns:
-#          - name: id
-#            description: "The primary key for this table"
-#            tests:
-#              - unique
-#              - not_null
+        columns:
+          - name: productid
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
   
       - name: salesreason
         description: "Tabela com os motivos dos pedidos de venda da Adventure Works"
-  
+        columns:
+          - name: salesreasonid
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
+
       - name: creditcard
         description: "Tabela com os tipos de cartão de crédito utilizados nos pedidos de venda da Adventure Works"
-  
+        columns:
+          - name: creditcardid
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
+
       - name: customer
         description: "Tabela staging de clientes da Adventure Works"
-#        columns:
-#          - name: id
-#            description: "The primary key for this table"
-#            tests:
-#              - unique
-#              - not_null
-  
+        columns:
+          - name: customerid
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
+          - name: personid
+            description: "Chave estrangeira que referencia a tabela person "
+            tests:
+              - unique
+      - name: person
+        description: "Tabela staging de pessoas da Adventure Works"
+        columns:
+          - name: businessentityid
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
+
       - name: address
         description: "Tabela de endereço dos clientes da Adventure Works"
-  
+        columns:
+          - name: addressid
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
+          - name: stateprovinceid
+            description: "Chave estrangeira que referencia a tabela stateprovince"
+            tests:
+              - not_null
+
       - name: stateprovince
         description: "Tabela que inclui o estado do endereço dos clientes da Adventure Works"
-  
+        columns:
+          - name: stateprovinceid
+            description: "Chave primária dessa tabela"
+            tests:
+              - not_null
+          - name: countryregioncode
+            description: "Chave estrangeira que referencia a tabela countryregion"
+            tests:
+              - not_null
+
       - name: countryregion
         description: "Tabela que inclui o país do endereço dos clientes da Adventure Works"
-  
+        columns:
+          - name: countryregioncode
+            description: "Chave primária dessa tabela"
+            tests:
+              - unique
+              - not_null
+
       - name: salesorderheader
         description: "Tabela de pedidos de venda da Adventure Works"
-  
+        columns:
+          - name: salesorderid
+            description: "Chave primária dessa tabela"
+            tests:
+              - not_null
+          - name: creditcardid
+            description: "Chave estrangeira que referencia a tabela creditcard"
+          - name: customerid
+            description: "Chave estrangeira que referencia a tabela customer"
+            tests:
+              - not_null
+
       - name: salesorderdetail
         description: "Tabela de detalhamento dos pedidos de venda da Adventure Works"
-  
+        columns:
+          - name: salesorderdetailid
+            description: "Chave primária dessa tabela"
+            tests:
+              - not_null
+          - name: salesorderid
+            description: "Chave estrangeira que referencia a tabela salesorderheader"
+            tests:
+              - not_null
+          - name: productid
+            description: "Chave estrangeira que referencia a tabela product"
+            tests:
+              - not_null
+
       - name: salesorderheadersalesreason
         description: "Tabela com as chaves que cruzam a tabela de pedidos de venda da Adventure Works com o motivo de venda"
+        columns:
+          - name: salesreasonid
+            description: "Chave primária dessa tabela"
+            tests:
+              - not_null
+          - name: salesorderid
+            description: "Chave estrangeira que referencia a tabela salesorderheader"
+            tests:
+              - not_null

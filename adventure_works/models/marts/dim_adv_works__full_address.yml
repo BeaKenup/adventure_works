@@ -1,0 +1,51 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works__full_address
+    description: "Tabela de dimensão com o registro dos endereços completos dos clientes da AdventureWorks, tabela feita da junção das tabelas Address, StateProvince e CountryRegion"
+    columns:
+      - name: address_sk
+        description: "Chave surrogate da tabela address"
+
+      - name: state_province_sk
+        description: "Chave surrogate da tabela stateprovince"
+
+      - name: address_id
+        description: "Chave primária para registros address"
+
+      - name: state_province_id
+        description: "Chave primária para registros StateProvince."
+
+      - name: territory_id
+        description: ""
+
+      - name: state_province_code
+        description: "Código de estado ou província"
+
+      - name: country_region_code
+        description: "Código de país ou região e chave estrangeira para a CountryRegion"
+
+      - name: address_line1
+        description: "Primeira linha de endereço"
+
+      - name: address_line2
+        description: "Segunda linha de endereço"
+
+      - name: city
+        description: "Nome da cidade"
+
+      - name: modified_date
+        description: "Data e hora da ultima atualização do registro"
+
+      - name: postal_code
+        description: "Código postal do endereço"
+
+      - name: spatial_location
+        description: "Latitude e longitude deste endereço"
+
+      - name: name_state
+        description: "Descrição do estado ou província"
+
+      - name: name_country
+        description: "Descrição do país ou região"

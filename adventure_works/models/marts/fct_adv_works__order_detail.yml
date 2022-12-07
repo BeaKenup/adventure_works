@@ -1,0 +1,76 @@
+
+version: 2
+
+models:
+  - name: fct_adv_works__order_detail
+    description: "Tabela Fato com os registros gerais dos pedidos realizadas para a AdventureWorks, formada pela união das tabelas salesorderheader, salesorderdetail e salesorderheadersalesreason"
+    columns:
+
+      - name: sales_order_id
+        description: "Chave primário dos registros de pedidos"
+      
+      - name: sales_reason_id
+        description: "Chave estrageira dos registros de motivo de compra"
+
+      - name: sales_person_id
+        description: "Chave estrangeira para a tabela person  "
+
+      - name: ship_to_address_id
+        description: "Chave estrageira para a tabela com os registros dos endereços de entrega dos clientes"
+
+      - name: credit_card_id
+        description: "Chave estrageira para a tabela com os registros dos cartões de credito"
+
+      - name: customer_id
+        description: "Chave estrageira para a tabela com os registros dos clientes"
+
+      - name: purchase_order_number
+        description: "Referência do número da ordem de compra do cliente"
+
+      - name: tax_amt
+        description: "Valor do imposto"
+
+      - name: online_order_flag
+        description: "Apontamento pelo forma de compra do cliente. 	0 = Pedido feito pelo vendedor. 1 = Pedido feito online pelo cliente."
+
+      - name: status
+        description: "Status atual do pedido"
+
+      - name: order_date
+        description: "Data do pedido"
+
+      - name: credit_card_approval_code
+        description: "Código de aprovação do cartão de crédito"
+
+      - name: sub_total
+        description: "Subtotal de vendas"
+
+      - name: freight
+        description: "Valor do frete"
+
+      - name: due_date
+        description: "Data de vencimento do envio do pedido"
+
+      - name: total_due
+        description: "Total devido pelo cliente"
+
+      - name: ship_date
+        description: "Data em que o pedido foi enviado ao cliente"
+
+      - name: sales_order_detail_id
+        description: "Chave estrageira com o registro dos detalhes dos pedidos"
+
+      - name: product_id
+        description: "Chave estrageira com o registro dos produtos"
+
+      - name: order_qty
+        description: "Quantidade encomendada por produto"
+
+      - name: unit_price
+        description: "Preço de venda de um único produto"
+
+      - name: unit_price_discount
+        description: "Valor do desconto"
+
+      - name: unit_price_negocied
+        description: "Valor negociado. Diferença entre o unit_price com unit_price_discount"

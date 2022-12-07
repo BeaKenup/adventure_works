@@ -1,0 +1,27 @@
+
+version: 2
+
+models:
+  - name: dim_adv_works__credit_cards
+    description: "Tabela de dimensão com as informações dos cartões de crédito utilizados para os pagamentos dos pedidos realizada para a AdventureWorks"
+    columns:
+      - name: credit_card_sk
+        description: "Chave surrogate tabela"
+
+      - name: credit_card_id
+        description: "Chave primária dos registros dos cartões de crédito"
+
+      - name: card_type
+        description: "Nome do cartão de crédito"
+
+      - name: exp_year
+        description: "Ano de validade do cartão de crédito"
+
+      - name: modified_date
+        description: "Data e hora da ultima atualização do registro"
+
+      - name: card_number
+        description: "Número do cartão de crédito"
+
+      - name: exp_month
+        description: "Mês de vencimento do cartão de crédito"
